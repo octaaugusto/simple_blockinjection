@@ -343,7 +343,7 @@ function _simple_blockinjection(){
 		// ............................
 		foreach($item as $KEY => $VALOR){
 			if(is_array($VALOR)){
-				for($x=0; $VALOR[$x]; $x++){
+				for($x=0; $x < sizeof($VALOR); $x++){
 					$item["{$KEY}_{$x}"] = $VALOR[$x];
 				}
 				unset($item[$KEY]);
